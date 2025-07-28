@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour Dieng 2 Hari 1 Malam - Trip Seru & Sunrise Sikunir</title>
+  <meta name="description" content="Paket wisata Dieng 2 Hari 1 Malam cocok untuk kamu yang ingin menikmati lebih dari sekadar perjalanan sehari. Termasuk sunrise di Bukit Sikunir dan kunjungan ke spot ikonik Dieng.">
+  <link rel="canonical" href="https://pesonadieng.com/tour-2-hari/" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .header {
+      background: #003e9c;
+      color: white;
+      text-align: center;
+      padding: 20px 10px 12px;
+    }
+    .header .page-title {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .header p {
+      margin: 4px 0 0;
+      font-size: 15px;
+    }
+    .main {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      min-height: 0;
+    }
+    #map { flex: 2; min-height: 300px; }
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background: #fff;
+      overflow-y: auto;
+    }
+    .sidebar h1 {
+      font-size: 22px;
+      color: #003e9c;
+      margin-top: 0;
+    }
+    .sidebar h2 {
+      font-size: 18px;
+      color: #003e9c;
+      margin: 14px 0 6px;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      padding: 16px;
+      background: #f8f8f8;
+      color: #444;
+    }
+    @media (max-width: 768px) {
+      .main { flex-direction: column; }
+      #map { width: 100%; height: 300px; }
+      .sidebar { padding: 16px; }
+      .header .page-title { font-size: 20px; }
+      .header p { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="page-title">
+      <a href="index.html" style="color:inherit; text-decoration:none;">
+        Tour Dieng 2 Hari 1 Malam
+      </a>
+    </div>
+    <p>Waktu pas, pengalaman lengkap. Tambah satu malam, rasakan sisi lain Dieng.</p>
+  </div>
+
+  <div class="main">
+    <div id="map"></div>
+    <div class="sidebar">
+      <h1>Paket Wisata 2H1M Dieng</h1>
+      <img src="tour-2.jpg" alt="Paket Tour Dieng 2 Hari" style="width:100%; height:auto; border-radius:8px; margin-bottom:16px;">
+
+      <p><strong>Harga mulai dari Rp975.000/pax</strong></p>
+      <p>
+        Pilihan ini cocok buat kamu yang ingin lebih dari sekadar mampir. Dengan tambahan satu malam, kamu bisa nikmati sunrise di Bukit Sikunir, suasana malam yang tenang, dan jelajahi lebih banyak tempat tanpa terburu-buru. 
+        Cocok untuk couple, keluarga kecil, atau solo traveler yang ingin pengalaman lebih mendalam.
+      </p>
+
+      <h2>Fasilitas</h2>
+      <ul>
+        <li>Transportasi AC (antar jemput Wonosobo – Dieng)</li>
+        <li>Akomodasi 1 malam di homestay/villa pilihan</li>
+        <li>Tiket masuk destinasi utama</li>
+        <li>Makan 3x (siang, malam, pagi)</li>
+        <li>Driver lokal berpengalaman</li>
+        <li>Dokumentasi dasar (foto HP)</li>
+        <li>Opsional: tour guide dan upgrade hotel</li>
+      </ul>
+
+      <h2>Destinasi</h2>
+      <ul>
+        <li>Telaga Warna & Batu Ratapan Angin</li>
+        <li>Candi Arjuna</li>
+        <li>Kawah Sikidang</li>
+        <li>Dieng Plateau Theater</li>
+        <li>Bukit Sikunir (sunrise)</li>
+        <li>Telaga Cebong</li>
+        <li>Skyline View & Bukit Scooter</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <p><strong>Apakah sunrise di Sikunir selalu dijamin?</strong><br>Cuaca adalah faktor utama. Kami bantu atur waktu ideal, tapi kondisi alam tetap di luar kendali manusia.</p>
+      <p><strong>Bisa pilih sendiri penginapan?</strong><br>Bisa. Tersedia opsi homestay, villa, atau hotel sesuai kebutuhan dan budget.</p>
+      <p><strong>Bisa berangkat dari kota lain?</strong><br>Bisa request penjemputan dari Jogja, Semarang, atau Purwokerto dengan biaya tambahan.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div style="margin-bottom:8px;">
+      <a href="/tentang/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Tentang</a>
+      <a href="/ketentuan/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Ketentuan</a>
+      <a href="/privasi/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Privasi</a>
+      <a href="/kontak/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Kontak</a>
+    </div>
+    © 2025 Paket Wisata Dieng | Semua hak cipta dilindungi
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map', { attributionControl: false });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    L.control.attribution({
+      prefix: '&copy; <a href="https://www.openstreetmap.org/" target="_blank" rel="nofollow noopener">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var sikunir = L.marker([-7.2300, 109.9155])
+      .bindPopup('<b>Bukit Sikunir</b>')
+      .addTo(map);
+
+    var arjuna = L.marker([-7.2045, 109.9080])
+      .bindPopup('<b>Candi Arjuna</b>')
+      .addTo(map);
+
+    var warna = L.marker([-7.2132, 109.9129])
+      .bindPopup('<b>Telaga Warna</b>')
+      .addTo(map);
+
+    var group = L.featureGroup([sikunir, arjuna, warna]);
+    map.fitBounds(group.getBounds(), {
+      paddingTopLeft: window.innerWidth <= 768 ? [30, 30] : [200, 50],
+      paddingBottomRight: [30, 30]
+    });
+  </script>
+
+</body>
+</html>

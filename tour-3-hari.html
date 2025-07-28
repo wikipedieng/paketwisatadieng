@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour Dieng 3 Hari 2 Malam - Eksplorasi Lengkap dan Sunrise Ganda</title>
+  <meta name="description" content="Tour Dieng 3 Hari 2 Malam adalah pilihan terbaik untuk menjelajahi semua keindahan Dieng. Sunrise ganda, hidden gems, kuliner, dan pengalaman tak terlupakan.">
+  <link rel="canonical" href="https://pesonadieng.com/tour-3-hari/" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .header {
+      background: #003e9c;
+      color: white;
+      text-align: center;
+      padding: 20px 10px 12px;
+    }
+    .header .page-title {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .header p {
+      margin: 4px 0 0;
+      font-size: 15px;
+    }
+    .main {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      min-height: 0;
+    }
+    #map { flex: 2; min-height: 400px; }
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background: #fff;
+      overflow-y: auto;
+    }
+    .sidebar h1 {
+      font-size: 22px;
+      color: #003e9c;
+      margin-top: 0;
+    }
+    .sidebar h2 {
+      font-size: 18px;
+      color: #003e9c;
+      margin: 14px 0 6px;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      padding: 16px;
+      background: #f8f8f8;
+      color: #444;
+    }
+    @media (max-width: 768px) {
+      .main { flex-direction: column; }
+      #map { width: 100%; height: 350px; }
+      .sidebar { padding: 16px; }
+      .header .page-title { font-size: 20px; }
+      .header p { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="page-title">
+      <a href="/" style="color:inherit; text-decoration:none;">
+        Tour Dieng 3 Hari 2 Malam
+      </a>
+    </div>
+    <p>Paket lengkap untuk kamu yang ingin menyelami Dieng lebih dalam – tanpa terburu-buru.</p>
+  </div>
+
+  <div class="main">
+    <div id="map"></div>
+    <div class="sidebar">
+      <h1>3D2N Dieng Explorer – Sunrise Ganda & Hidden Gems</h1>
+      <img src="tour-3.jpg" alt="Tour Dieng 3 Hari 2 Malam" style="width:100%; height:auto; border-radius:8px; margin-bottom:16px;">
+
+      <p><strong>Harga mulai dari Rp1.700.000/pax</strong></p>
+      <p>
+        Cocok untuk kamu yang ingin merasakan Dieng secara utuh. Sunrise ganda di Bukit Sikunir & Sikapuk, suasana malam yang tenang, serta destinasi-destinasi tersembunyi yang tidak sempat dikunjungi dalam trip singkat. 
+        Waktu 3 hari memungkinkan fleksibilitas dan kenyamanan. Ideal untuk kamu yang suka eksplor, healing, dan pengalaman tak terlupakan.
+      </p>
+
+      <h2>Fasilitas</h2>
+      <ul>
+        <li>Transportasi full AC (PP Wonosobo – Dieng – explore lokal)</li>
+        <li>Akomodasi 2 malam (homestay atau villa)</li>
+        <li>Makan 5x (siang, malam, pagi)</li>
+        <li>Tiket masuk semua destinasi</li>
+        <li>Sunrise trip ke Sikunir & Sikapuk</li>
+        <li>Dokumentasi standar (bisa upgrade ke pro)</li>
+        <li>Air mineral, snack, dan guide lokal</li>
+      </ul>
+
+      <h2>Destinasi</h2>
+      <ul>
+        <li>Telaga Warna & Batu Ratapan Angin</li>
+        <li>Candi Arjuna & Kawah Sikidang</li>
+        <li>Dieng Plateau Theater & Museum Kailasa</li>
+        <li>Bukit Sikunir & Telaga Cebong (sunrise)</li>
+        <li>Bukit Sikapuk (sunrise ke-2)</li>
+        <li>Air Terjun Sikarim & Kebun Teh</li>
+        <li>Skyline View & Bukit Scooter</li>
+        <li>Telaga Menjer & Telaga Dringo</li>
+        <li>Hidden spot: Savana Pangonan</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <p><strong>Apakah bisa custom itinerary?</strong><br>Tentu bisa. Silakan request ke admin sebelum hari H.</p>
+      <p><strong>Ada opsi upgrade penginapan?</strong><br>Ya, tersedia pilihan villa atau hotel dengan tambahan biaya.</p>
+      <p><strong>Trip ini cocok untuk siapa?</strong><br>Sangat cocok untuk pasangan, keluarga, komunitas kecil, atau solo traveler yang ingin pengalaman lengkap.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div style="margin-bottom:8px;">
+      <a href="/tentang/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Tentang</a>
+      <a href="/ketentuan/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Ketentuan</a>
+      <a href="/privasi/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Privasi</a>
+      <a href="/kontak/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Kontak</a>
+    </div>
+    © 2025 Paket Wisata Dieng | Semua hak cipta dilindungi
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map', { attributionControl: false });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    L.control.attribution({
+      prefix: '&copy; <a href="https://www.openstreetmap.org/" target="_blank" rel="nofollow noopener">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var icons = {
+      sunrise: new L.Icon.Default(),
+      lake: new L.Icon.Default(),
+      culture: new L.Icon.Default(),
+      view: new L.Icon.Default()
+    };
+
+    var spots = [
+      { name: "Bukit Sikunir", coords: [-7.2300, 109.9155], icon: icons.sunrise },
+      { name: "Bukit Sikapuk", coords: [-7.237, 109.922], icon: icons.sunrise },
+      { name: "Telaga Warna", coords: [-7.2132, 109.9129], icon: icons.lake },
+      { name: "Telaga Cebong", coords: [-7.2285, 109.9165], icon: icons.lake },
+      { name: "Telaga Dringo", coords: [-7.2205, 109.8849], icon: icons.lake },
+      { name: "Candi Arjuna", coords: [-7.2045, 109.9080], icon: icons.culture },
+      { name: "Kawah Sikidang", coords: [-7.2265, 109.9196], icon: icons.culture },
+      { name: "Dieng Theater", coords: [-7.2130, 109.9108], icon: icons.culture },
+      { name: "Museum Kailasa", coords: [-7.2040, 109.9070], icon: icons.culture },
+      { name: "Air Terjun Sikarim", coords: [-7.2440, 109.9000], icon: icons.view },
+      { name: "Kebun Teh", coords: [-7.2410, 109.8890], icon: icons.view },
+      { name: "Telaga Menjer", coords: [-7.3240, 109.9300], icon: icons.lake },
+      { name: "Skyline View", coords: [-7.2260, 109.8900], icon: icons.view },
+      { name: "Bukit Scooter", coords: [-7.2030, 109.9010], icon: icons.view },
+      { name: "Savana Pangonan", coords: [-7.2136, 109.9111], icon: icons.view }
+    ];
+
+    spots.forEach(s => {
+      L.marker(s.coords, { icon: s.icon }).addTo(map)
+        .bindPopup('<b>' + s.name + '</b>');
+    });
+
+    var group = L.featureGroup(spots.map(s => L.marker(s.coords)));
+    map.fitBounds(group.getBounds(), {
+      paddingTopLeft: window.innerWidth <= 768 ? [30, 30] : [200, 50],
+      paddingBottomRight: [30, 30]
+    });
+  </script>
+
+</body>
+</html>

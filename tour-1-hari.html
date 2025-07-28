@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour Dieng 1 Hari - Paket Wisata Sehari Penuh dari Wonosobo</title>
+  <meta name="description" content="Tour Dieng 1 Hari, cocok untuk kamu yang ingin menjelajahi Dieng dalam sehari penuh. Start dari Wonosobo, kunjungi Telaga Warna, Candi Arjuna, Kawah Sikidang dan lainnya.">
+  <link rel="canonical" href="https://pesonadieng.com/tour-1-hari/" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .header {
+      background: #003e9c;
+      color: white;
+      text-align: center;
+      padding: 20px 10px 12px;
+    }
+    .header .page-title {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .header p {
+      margin: 4px 0 0;
+      font-size: 15px;
+    }
+    .main {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      min-height: 0;
+    }
+    #map { flex: 2; min-height: 300px; }
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background: #fff;
+      overflow-y: auto;
+    }
+    .sidebar h1 {
+      font-size: 22px;
+      color: #003e9c;
+      margin-top: 0;
+    }
+    .sidebar h2 {
+      font-size: 18px;
+      color: #003e9c;
+      margin: 14px 0 6px;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      padding: 16px;
+      background: #f8f8f8;
+      color: #444;
+    }
+    @media (max-width: 768px) {
+      .main { flex-direction: column; }
+      #map { width: 100%; height: 300px; }
+      .sidebar { padding: 16px; }
+      .header .page-title { font-size: 20px; }
+      .header p { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="page-title">
+      <a href="/" style="color:inherit; text-decoration:none;">
+        Tour Dieng 1 Hari
+      </a>
+    </div>
+    <p>Explore Dieng dalam satu hari penuh, efektif dan berkesan.</p>
+  </div>
+
+  <div class="main">
+    <div id="map"></div>
+    <div class="sidebar">
+      <h1>Paket Wisata 1 Hari Dieng</h1>
+      <img src="tour-1.jpg" alt="Paket Tour Dieng 1 Hari" style="width:100%; height:auto; border-radius:8px; margin-bottom:16px;">
+
+      <p><strong>Harga mulai dari Rp275.000/pax</strong></p>
+      <p>
+        Paket ini dimulai dari Wonosobo pagi hari dan kembali sore hari. Dalam sehari kamu akan mengunjungi tempat paling ikonik di Dieng tanpa terburu-buru. Ideal untuk kamu yang ingin eksplorasi cepat tapi tetap berkesan.
+      </p>
+
+      <h2>Fasilitas</h2>
+      <ul>
+        <li>Transportasi AC dari Wonosobo (PP)</li>
+        <li>Tiket masuk destinasi utama</li>
+        <li>Driver lokal ramah</li>
+        <li>Air mineral</li>
+        <li>Tour guide opsional</li>
+        <li>Dokumentasi dasar (foto hp)</li>
+      </ul>
+
+      <h2>Destinasi</h2>
+      <ul>
+        <li>Telaga Warna</li>
+        <li>Batu Ratapan Angin</li>
+        <li>Dieng Plateau Theater</li>
+        <li>Candi Arjuna</li>
+        <li>Kawah Sikidang</li>
+        <li>Batu Pandang</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <p><strong>Apa bisa dijemput dari hotel di Wonosobo?</strong><br>Ya, bisa request penjemputan langsung dari penginapan di kota Wonosobo.</p>
+      <p><strong>Berapa minimal peserta?</strong><br>Minimal 2 orang, bisa gabung jika solo traveler.</p>
+      <p><strong>Apa bisa request destinasi lain?</strong><br>Bisa, selama masih dalam jalur dan waktu memungkinkan.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div style="margin-bottom:8px;">
+      <a href="/tentang/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Tentang</a>
+      <a href="/ketentuan/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Ketentuan</a>
+      <a href="/privasi/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Privasi</a>
+      <a href="/kontak/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Kontak</a>
+    </div>
+    © 2025 Paket Wisata Dieng | Semua hak cipta dilindungi
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map', { attributionControl: false });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    L.control.attribution({
+      prefix: '&copy; <a href="https://www.openstreetmap.org/" target="_blank" rel="nofollow noopener">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var arjuna = L.marker([-7.2045, 109.9080])
+      .bindPopup('<b>Candi Arjuna</b>')
+      .addTo(map);
+
+    var sikidang = L.marker([-7.226509, 109.919636])
+      .bindPopup('<b>Kawah Sikidang</b>')
+      .addTo(map);
+
+    var telaga = L.marker([-7.2132, 109.9129])
+      .bindPopup('<b>Telaga Warna</b>')
+      .addTo(map);
+
+    var group = L.featureGroup([arjuna, sikidang, telaga]);
+    map.fitBounds(group.getBounds(), {
+      paddingTopLeft: window.innerWidth <= 768 ? [30, 30] : [200, 50],
+      paddingBottomRight: [30, 30]
+    });
+  </script>
+
+</body>
+</html>
